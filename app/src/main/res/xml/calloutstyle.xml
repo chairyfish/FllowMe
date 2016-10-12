@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <calloutViewStyle>
+        titleTextColor="#000000"      <!-- 标题颜色 -->
+        titleTextSize = 10;           <!-- 标题文字大小 -->
+        titleTextStyle = 0;           <!-- 字体样式 -->
+        titleTextTypeFace = 0;        <!-- 字体类型设置 -->
+        backgroundColor="#ffffff"    <!-- Callout背景颜色 -->
+        backgroundAlpha="255"        <!-- Callout透明度 -->
+        frameColor="#ffffff"         <!-- 边框颜色 -->
+        flat="true"                  <!-- true表示2D图形，false表示3D图形 -->
+        style.getCornerCurve()="0"   <!-- 边框的角的圆润程度 -->
+        anchor="5"                   <!-- 锚点的位置-->
+    </calloutViewStyle>
+</resources>

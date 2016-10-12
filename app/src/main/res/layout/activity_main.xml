@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_white"
+    tools:context=".activity.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ly_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/rb_moments"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg2"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/tab_menu_youjiquan"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/tab_menu_youjiquan"
+            android:textColor="@color/gary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/rb_guide"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg2"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/tab_menu_ditu"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/tab_menu_ditu"
+            android:textColor="@color/gary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/rb_contact"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg2"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/tab_menu_lianxiren"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/tab_menu_lianxiren"
+            android:textColor="@color/gary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/rb_user"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg2"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/tab_menu_wo"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/tab_menu_wo"
+            android:textColor="@color/gary"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@id/ly_tab_bar"
+        android:background="@color/div_white" />
+
+
+    <FrameLayout
+        android:id="@+id/ly_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/div_tab_bar"
+        android:layout_alignParentTop="true"
+        android:textColor="#000000"></FrameLayout>
+
+</RelativeLayout>

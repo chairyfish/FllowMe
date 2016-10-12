@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical">
+
+    <com.esri.android.map.MapView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ditu"
+        mapoptions.Center="32.056215, 112.195668"
+        mapoptions.MapType="street"
+        mapoptions.ZoomLevel="16"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"></com.esri.android.map.MapView>
+
+    <ImageButton
+        android:id="@+id/menu_followme"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="right|top"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="80.0dp"
+        android:background="@drawable/tab_followme" />
+
+    <ImageButton
+        android:id="@+id/menu_linkroute"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="right|top"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="140.0dp"
+        android:background="@drawable/tab_routing" />
+
+    <ImageButton
+        android:id="@+id/menu_location"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="left|bottom"
+        android:layout_marginBottom="10.0dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/tab_location" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#cff0d0"></RelativeLayout>
+
+    <EditText
+        android:id="@+id/searchplace"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_shape_a"
+        android:hint="输入你要去的地方"
+        android:inputType="text"
+        android:paddingLeft="3dp"
+        android:singleLine="true"
+        android:textColor="#ff999999"
+        android:textColorHint="#f0f0f0"
+        android:textSize="16.0sp" />
+
+</FrameLayout>

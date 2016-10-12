@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white"
+    android:drawingCacheQuality="auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/backgroundbook">
+
+        <ImageView
+            android:id="@+id/backgroundphoto"
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:background="#dbebc4"
+            android:scaleType="center" />
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/anjiao" />
+
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="400dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:text="上海之行"
+            android:textColor="#ffffff"
+            android:textSize="40dp" />
+        <!--      android:shadowColor="#333333"
+              android:shadowDx="2"
+              android:shadowDy="2"
+              android:shadowRadius="5"   !-->
+
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_alignEnd="@+id/backgroundphoto"
+            android:layout_below="@+id/backgroundphoto"
+            android:gravity="right"
+            android:paddingRight="5dp"
+            android:paddingTop="15dp"
+            android:shadowColor="#333333"
+            android:text="作者：cat"
+            android:textColor="#999"
+            android:textSize="15dp" />
+
+
+    </RelativeLayout>
+</LinearLayout>

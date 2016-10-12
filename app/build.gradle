@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22"
+
+    defaultConfig {
+        applicationId "com.example.melvin.fllowme"
+        minSdkVersion 19
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'cn.bmob.android:bmob-sdk:3.5.0'
+    compile files('libs/Bmob_Push_V1.0.0beta_20160627.jar')
+    compile 'com.esri.arcgis.android:arcgis-android:10.2.8'
+    compile files('libs/AMap_2DMap_V2.9.0_20160525.jar')
+    compile files('libs/AMap_Search_V3.3.0_20160616.jar')
+    compile files('libs/AMap_Location_V2.4.1_20160414.jar')
+
+}

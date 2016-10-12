@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.melvin.fllowme">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+     
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- 定位包、导航包需要的额外权限（注：基础权限也需要） -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" /> -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <application
+        android:name=".utils.ContextUtils"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="57865bf64c985b739f07698d6d590e0f" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.SignUpActivity" />
+        <activity android:name=".activity.AddFriendActivity" />
+        <activity android:name=".activity.ReplyActivity" />
+        <activity android:name=".activity.MyInfoActivity" />
+        <activity android:name=".activity.FriendInfoActivity" />
+        <activity android:name=".activity.NoteActivity" />
+        <activity android:name=".route.DriveRouteDetailActivity" />
+        <activity android:name=".route.RouteActivity" />
+        <activity android:name=".Poisearch.PoiAroundSearchActivity" />
+        <activity android:name=".route.BusRouteDetailActivity" />
+        <activity android:name=".route.WalkRouteDetailActivity" />
+
+        <service
+            android:name="cn.bmob.push.lib.service.PushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":bmobpush">
+            <intent-filter>
+                <action android:name="cn.bmob.push.lib.service.PushService" />
+            </intent-filter>
+        </service>
+
+        <!-- &lt;!&ndash; 用于进程保活 &ndash;&gt; -->
+        <!-- <service -->
+        <!-- android:name="cn.bmob.push.lib.service.PushNotifyService" -->
+        <!-- android:process=":bmobpush" > -->
+        <!-- </service> -->
+
+        <receiver android:name="cn.bmob.push.PushReceiver">
+            <intent-filter>
+
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!-- 解锁完成后会调用 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <!-- 监听网络连通性 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 第四部中创建的消息接收器，在这里进行注册 -->
+        <receiver android:name=".receiver.MessageReceiver">
+            <intent-filter>
+                <action android:name="cn.bmob.push.action.MESSAGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- &lt;!&ndash; 接收心跳和唤醒的广播，要和PushService运行在同个进程 &ndash;&gt; -->
+        <!-- <receiver -->
+        <!-- android:name="cn.bmob.push.PushNotifyReceiver" -->
+        <!-- android:process=":bmobpush" > -->
+        <!-- <intent-filter> -->
+        <!-- &lt;!&ndash; 接收心跳广播的action &ndash;&gt; -->
+        <!-- <action android:name="cn.bmob.push.action.HEARTBEAT" /> -->
+        <!-- &lt;!&ndash; 接收唤醒广播的action &ndash;&gt; -->
+        <!-- <action android:name="cn.bmob.push.action.NOTIFY" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <activity android:name=".activity.RecordMapActivity" />
+        <activity android:name=".activity.RecordItemActivity" />
+        <activity android:name=".routing.LinkRouteActivity" />
+        <activity android:name=".followme.FollowMeActivity"></activity>
+
+    </application>
+
+</manifest>
